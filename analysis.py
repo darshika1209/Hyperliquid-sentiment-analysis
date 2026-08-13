@@ -43,8 +43,10 @@ def clean_and_merge(sentiment, trades):
 
     sentiment["date"] = pd.to_datetime(sentiment["date"]).dt.date
 
+    # Use the numeric millisecond-epoch 'Timestamp' column (not the string
+    # 'Timestamp IST' column) -- this is what correctly parses every row.
     trades["Timestamp"] = pd.to_datetime(
-        trades["Timestamp IST"], errors="coerce"
+        trades["Timestamp"], unit="ms", errors="coerce"
     )
     trades["date"] = trades["Timestamp"].dt.date
 
