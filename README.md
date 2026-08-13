@@ -53,7 +53,7 @@ Does trader sentiment actually predict outcomes — or is it just noise? This pr
 
 ## Live Demo
 
-🔗 [Add your Streamlit Cloud link here once deployed]
+🔗 https://hyperliquid-sentiment-analysiss.streamlit.app/
 
 ## What's Next
 
